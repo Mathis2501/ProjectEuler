@@ -5,7 +5,7 @@ using System.Text;
 using PrettyHair;
 
 namespace PH_UI
-{
+{//
     class Program
     {
         string NL = Environment.NewLine;
