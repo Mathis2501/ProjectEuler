@@ -9,7 +9,7 @@ namespace PrettyHair
     {
         
         Product product = new Product();
-        static List<Product> productList = new List<Product>();
+        List<Product> productList = new List<Product>();
         List<string> stringList = new List<string>();
 
         public void AddIgnoredAsFirstToList()
@@ -43,7 +43,7 @@ namespace PrettyHair
 
         public void AdjustPriceByIndex(int index, double adjustedPrice)
         {
-            productList[index].AdjustPrice(adjustedPrice);
+            productList[index].Price = adjustedPrice;
         }
 
         public void DeleteProduct(int productId)

@@ -117,7 +117,7 @@ namespace UnitTestProjectPH
             prodRepo.AddProductToList(newProduct);
             prodRepo.AddProductToList(newProduct2);
 
-            prodRepo.DeleteProduct(5);
+            prodRepo.DeleteProduct(6);
 
             List<Product> productList = prodRepo.GetList();
 
