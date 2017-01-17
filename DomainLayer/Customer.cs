@@ -60,5 +60,7 @@ namespace DomainLayer
         {
             return lastName + ", " + firstName + ", " + address + ", " + phoneNumber;
         }
+
+        
     }
 }

@@ -57,6 +57,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DomainLayer\DomainLayer.csproj">
+      <Project>{B1CBBB0A-C0A7-4B94-B0E9-B399C616DD25}</Project>
+      <Name>DomainLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PrettyHair\PrettyHair.csproj">
       <Project>{af5eb97d-720e-4c66-9a5a-296e33d66765}</Project>
       <Name>PrettyHair</Name>
