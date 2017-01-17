@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 
 namespace DatabaseLayer
-{
+{//test
     public class Database
     {
         private static string connectionString =
