@@ -6,7 +6,7 @@ using PrettyHair;
 using DomainLayer;
 
 namespace PH_UI
-{
+{//
     class Program
     {
         string NL = Environment.NewLine;
