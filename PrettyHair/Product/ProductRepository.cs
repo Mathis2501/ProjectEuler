@@ -7,7 +7,6 @@ namespace PrettyHair
 {
     public class ProductRepository
     {
-        
         Product product = new Product();
         List<Product> productList = new List<Product>();
         List<string> stringList = new List<string>();
@@ -43,7 +42,7 @@ namespace PrettyHair
 
         public void AdjustPriceByIndex(int index, double adjustedPrice)
         {
-            productList[index].AdjustPrice(adjustedPrice);
+            productList[index].Price = adjustedPrice;
         }
 
         public void DeleteProduct(int productId)

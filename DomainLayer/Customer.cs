@@ -3,18 +3,45 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace PrettyHair
+namespace DomainLayer
 {
     public class Customer
     {
         //Variables
-        //static int nextId = 1;
-
-        //int id;
         string lastName;
         string firstName;
         string address;
         string phoneNumber;
+
+        public string LastName
+        {
+            get
+            {
+                return lastName;
+            }
+        }
+        public string FirstName
+        {
+            get
+            {
+                return firstName;
+            }
+        }
+        public string Address
+        {
+            get
+            {
+                return address;
+            }
+        }
+        public string PhoneNumber
+        {
+            get
+            {
+                return phoneNumber;
+            }
+        }
+
         //Constructor
         public Customer()
         {
@@ -26,13 +53,9 @@ namespace PrettyHair
             this.firstName = firstName;
             this.address = address;
             this.phoneNumber = phoneNumber;
-            //id = nextId++;
         }
+
         //Methods
-        //public int GetId()
-        //{
-        //    return id;
-        //}
         public override string ToString()
         {
             return lastName + ", " + firstName + ", " + address + ", " + phoneNumber;

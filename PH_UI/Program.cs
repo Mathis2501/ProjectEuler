@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using PrettyHair;
+using DomainLayer;
 
 namespace PH_UI
 {//
@@ -21,6 +22,9 @@ namespace PH_UI
 
         public void Run()
         {
+
+            ShowCustomerList();
+            Console.Clear();
             string choice = "";
             bool run = true;
             prodRepo.AddIgnoredAsFirstToList();
@@ -33,13 +37,13 @@ namespace PH_UI
                 switch (choice)
                 {
                     case "r": RegisterCustomer(); break;
-                    case "l": ShowCustomerList(); break;
+                    case "l": ShowCustomerList(); Console.ReadKey(); break;
                     case "p": ShowProductInventory(); break;
-                    case "i": InputOrder(); break;
-                    case "n": NewProductType(); break;
-                    case "d": ChangeDescription(); break;
-                    case "a": AdjustPrice(); break;
-                    case "o": ShowOrderList(); break;
+                   //case "i": InputOrder(); break;
+                   //case "n": NewProductType(); break;
+                   //case "d": ChangeDescription(); break;
+                   //case "a": AdjustPrice(); break;
+                   //case "o": ShowOrderList(); break;
                     case "addorder": AddTestOrders(); break;
                     case "addprod": AddTestProducts(); break;
                     case "test": TestEvent();   break;
@@ -74,21 +78,24 @@ namespace PH_UI
         }
         public void RegisterCustomer()
         {
-            DatabaseFacade databaseConnect = new DatabaseFacade();
-            databaseConnect.InsertCustomer();
-            //Console.WriteLine("Customer last name:");
-            //string lastName = GetUserInput();
-            //Console.WriteLine("Customer first name:");
-            //string firstName = GetUserInput();
-            //Console.WriteLine("Customer address:");
-            //string address = GetUserInput();
-            //Console.WriteLine("Customer phone number:");
-            //string phoneNumber = GetUserInput();
+
+            //DatabaseFacade databaseConnect = new DatabaseFacade();
+            //databaseConnect.InsertCustomer();
+            Console.WriteLine("Customer last name:");
+            string lastName = GetUserInput();
+            Console.WriteLine("Customer first name:");
+            string firstName = GetUserInput();
+            Console.WriteLine("Customer address:");
+            string address = GetUserInput();
+            Console.WriteLine("Customer phone number:");
+            string phoneNumber = GetUserInput();
             //Customer newCustomer = new Customer(lastName, firstName, address, phoneNumber);
             //customerRepository.AddCustomerToList(newCustomer);
             //Console.WriteLine("You have registered: " + lastName + ", " + firstName + ", " + address + ", " + phoneNumber + "." + NL + "Click Enter");
             //Console.ReadKey();
+            BusinessFacade.Instance.SaveCustomer(lastName, firstName, address, phoneNumber);
         }
+        /*
         public void InputOrder()
         {
             Console.WriteLine("Order date: 'dd-mm-yyyy'");
@@ -142,21 +149,32 @@ namespace PH_UI
             double adjustedPrice = double.Parse(GetUserInput());
 
             prodRepo.AdjustPriceByIndex(indexToChange, adjustedPrice);
-        }
+        }*/
         public void ShowCustomerList()
         {
-            DatabaseFacade dbf = new DatabaseFacade();
-            dbf.GetCustomer();
-            List<string> customerList = custRepo.GetListAsStringList();
-            foreach (string customer in customerList)
+            
+            List<Customer> finalCustList = BusinessFacade.Instance.ShowCustomer();
+
+            foreach (Customer cust in finalCustList)
             {
-                Console.WriteLine(customer);
+                Console.WriteLine(cust.ToString());
+
             }
-            Console.ReadKey();
-            customerList.Clear();
-            custRepo.ClearRepository();
+            
+
+            //DatabaseFacade dbf = new DatabaseFacade();
+            //dbf.GetCustomer();
+            //List<Customer> customerList = custRepo.GetCustomerList();
+            //foreach (Customer customer in customerList)
+            //{
+            //    Console.WriteLine(customer.ToString());
+            //}
+            //Console.ReadKey();
+            //customerList.Clear();
+            //custRepo.ClearRepository();
             
         }
+        
         public void AddTestProducts()
         {
             Product newProduct1 = new Product("Hair Brush", 20.95, "With steelhandle", 20);

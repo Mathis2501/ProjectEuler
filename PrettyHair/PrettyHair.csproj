@@ -39,15 +39,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customer.cs" />
-    <Compile Include="DatabaseFacade.cs" />
+    <Compile Include="Business\BusinessFacade.cs" />
     <Compile Include="Email.cs" />
-    <Compile Include="OrderRepository.cs" />
-    <Compile Include="Product.cs" />
-    <Compile Include="ProductRepository.cs" />
-    <Compile Include="Order.cs" />
+    <Compile Include="Order\OrderRepository.cs" />
+    <Compile Include="Product\Product.cs" />
+    <Compile Include="Product\ProductRepository.cs" />
+    <Compile Include="Order\Order.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="CustomerRepository.cs" />
+    <Compile Include="Customer\CustomerRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DatabaseLayer\DatabaseLayer.csproj">
+      <Project>{9062b9f9-1e5a-4e15-b65d-9fe9c17c5a15}</Project>
+      <Name>DatabaseLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DomainLayer\DomainLayer.csproj">
+      <Project>{b1cbbb0a-c0a7-4b94-b0e9-b399c616dd25}</Project>
+      <Name>DomainLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
