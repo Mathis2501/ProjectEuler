@@ -116,7 +116,7 @@ namespace DatabaseLayer
             }
 
             DateTime date = new DateTime();
-            string dato = date.ToString("yyyyMMddHmmss");
+            string dato = date.ToString("yyyyMMddHmmssfff");
             nextKey = dato + cpuInfo;
             return nextKey;
         }
