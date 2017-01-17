@@ -103,7 +103,7 @@ namespace UnitTestProjectPH
             Product newProduct = new Product("Hairbrush", 20.00, "Hairbrush with steelhandle", 45);
             ProductRepository prodRepo = new ProductRepository();
             prodRepo.AddProductToList(newProduct);
-            prodRepo.AdjustPriceByIndex(0, 35.00);
+            prodRepo.AdjustPriceByIndex(1, 35.00);
 
             Assert.AreEqual(35.00, newProduct.Price);
         }
