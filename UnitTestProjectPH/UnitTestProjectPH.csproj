@@ -58,7 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DomainLayer\DomainLayer.csproj">
-      <Project>{b1cbbb0a-c0a7-4b94-b0e9-b399c616dd25}</Project>
+      <Project>{B1CBBB0A-C0A7-4B94-B0E9-B399C616DD25}</Project>
       <Name>DomainLayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\PrettyHair\PrettyHair.csproj">

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using PrettyHair;
 using DomainLayer;
+using System.Management;
 
 namespace PH_UI
 {//
@@ -22,6 +23,9 @@ namespace PH_UI
 
         public void Run()
         {
+            
+
+
 
             ShowCustomerList();
             Console.Clear();

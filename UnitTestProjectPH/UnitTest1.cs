@@ -30,44 +30,19 @@ namespace UnitTestProjectPH
 
             Assert.AreEqual(2, customerList.Count);
         }
-        //[TestMethod]
-        //public void CanGetCustomerListAsStrings()
-        //{
-        //    CustomerRepository custRepo = new CustomerRepository();
-        //    Customer customer1 = new Customer("Christensen", "Jimmi", "Bernstorffsvej 10", "28734552");
-        //    Customer customer2 = new Customer("Larsen", "Katrine", "Bernstorffsvej 10", "77456322");
 
-        //    custRepo.AddCustomerToList(customer1);
-        //    custRepo.AddCustomerToList(customer2);
+        
+        [TestMethod]
+        public void CanAddOrderToList()
+        {
+            OrderRepository invRepo = new OrderRepository();
+            Order newOrder = new Order(DateTime.Parse("15-11-2016"), DateTime.Parse("01-12-2016"), 20, 2);
 
-        //    List<string> stringList = custRepo.GetListAsStringList();
+            invRepo.AddOrderToList(newOrder);
+            List<Order> orderList = invRepo.GetList();
 
-        //    Assert.IsInstanceOfType(stringList[0], typeof(string));
-        //}
-        //[TestMethod]
-        //public void CanGiveEachCustomerUniqueID()
-        //{
-        //    CustomerRepository custRepo = new CustomerRepository();
-
-        //    Customer customer1 = new Customer("Christensen", "Jimmi", "Bernstorffsvej 10", "28734552");
-        //    Customer customer2 = new Customer("Larsen", "Katrine", "Bernstorffsvej 10", "77456322");
-
-        //    custRepo.AddCustomerToList(customer1);
-        //    custRepo.AddCustomerToList(customer2);
-
-        //    Assert.AreNotEqual(customer1.GetId(), customer2.GetId());
-        //}
-        //[TestMethod]
-        //public void CanAddOrderToList()
-        //{
-        //    OrderRepository invRepo = new OrderRepository();
-        //    Order newOrder = new Order(DateTime.Parse("15-11-2016"), DateTime.Parse("01-12-2016"), 20, 2);
-
-        //    invRepo.AddOrderToList(newOrder);
-        //    List<Order> orderList = invRepo.GetList();
-
-        //    Assert.AreEqual(1, orderList.Count);
-        //}
+            Assert.AreEqual(1, orderList.Count);
+        }
         [TestMethod]
         public void CanChangeProductDescription()
         {
