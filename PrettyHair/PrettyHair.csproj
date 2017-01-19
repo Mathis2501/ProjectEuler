@@ -42,7 +42,6 @@
     <Compile Include="Business\BusinessFacade.cs" />
     <Compile Include="Email.cs" />
     <Compile Include="Order\OrderRepository.cs" />
-    <Compile Include="Product\Product.cs" />
     <Compile Include="Product\ProductRepository.cs" />
     <Compile Include="Order\Order.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
