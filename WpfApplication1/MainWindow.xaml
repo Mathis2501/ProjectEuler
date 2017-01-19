@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplication1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="281,158,0,0" VerticalAlignment="Top" Width="75"/>
+        Title="Prettyhair" Height="165" Width="130" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,0,0" RenderTransformOrigin="0.0,0.0">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnCustomer" Content="Customer" HorizontalAlignment="Center" Margin="0,0,0,80" VerticalAlignment="Center" Width="100" Height="30"/>
+        <Button x:Name="btnProduct" Content="Product" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Width="100" Height="30"/>
+        <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Center" Margin="0,80,0,0" VerticalAlignment="Center" Width="100" Height="30"/>
     </Grid>
 </Window>
