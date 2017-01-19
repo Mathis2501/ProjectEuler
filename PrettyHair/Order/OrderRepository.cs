@@ -8,7 +8,7 @@ namespace PrettyHair
     public class OrderRepository
     {
         ProductRepository prodRepo = new ProductRepository();
-        static List<Order> orderList = new List<Order>();
+        List<Order> orderList = new List<Order>();
         List<string> stringList = new List<string>();
         
 
