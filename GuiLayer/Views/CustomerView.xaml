@@ -4,22 +4,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:GuiLayer.Views"
+             xmlns:Domain="clr-namespace:DomainLayer;assembly=DomainLayer"
              mc:Ignorable="d" 
              d:DesignHeight="430" d:DesignWidth="300">
     <Canvas>
         <Button Canvas.Left="10" x:Name="btnBack" Content="Back" Width="50" Height="30" Canvas.Bottom="10" Canvas.Top="390"/>
-        <Button Canvas.Right="20" x:Name="BtnAdd" Content="Add Customer" Width="200" Height="30" Canvas.Bottom="10" Canvas.Left="90" Canvas.Top="390"/>
-        <ListView Name="CustomerListView" Margin="0,0,0,0" Canvas.Top="45" Height="340" Canvas.Left="10" Width="280" >
-            <ListView.View>
-                <GridView >
-                    <GridViewColumn Header="Firstname" Width="70" DisplayMemberBinding="{Binding  firstName}" />
-                    <GridViewColumn Header="Lastname" Width="70" DisplayMemberBinding="{Binding lastName}" />
-                    <GridViewColumn Header="Address" Width="70" DisplayMemberBinding="{Binding address}" />
-                    <GridViewColumn Header="Tlf" Width="70" DisplayMemberBinding="{Binding phoneNumber}" />
-
-                </GridView>
-            </ListView.View>
-        </ListView>
+        <Button Canvas.Right="20" x:Name="BtnAdd" Content="Add Customer" Width="200" Height="30" Canvas.Bottom="10" Canvas.Left="90" Canvas.Top="390" />
         <TextBox x:Name="txtSearch" Height="30" Canvas.Left="10" TextWrapping="Wrap" Text="Search" Canvas.Top="10" Width="280" VerticalContentAlignment="Center" FontSize="18"/>
+        <DataGrid x:Name="dataGrid" Canvas.Left="10" Canvas.Top="45" Height="340" Width="280"/>
     </Canvas>
 </UserControl>

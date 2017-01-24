@@ -8,10 +8,10 @@ namespace DomainLayer
     public class Customer
     {
         //Variables
-        string lastName;
-        string firstName;
-        string address;
-        string phoneNumber;
+        public string lastName;
+        public string firstName;
+        public string address;
+        public string phoneNumber;
 
         public string LastName
         {

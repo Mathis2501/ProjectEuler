@@ -13,7 +13,7 @@
     <Window.DataContext>
         <ViewModel:MainWindowViewModel />
     </Window.DataContext>
-    
+
     <Window.Resources>
         <DataTemplate DataType="{x:Type ViewModel:CustomerViewModel}">
             <views:CustomerView />
@@ -57,7 +57,7 @@
             Grid.Column="2" />
         </Grid>
         <Grid x:Name="MainContent" Grid.Row="1">
-            <ContentControl Content="{Binding CurrentViewModel}" />
+            <ContentControl Content="{Binding CurrentViewModel}"/>
         </Grid>
     </Grid>
 </Window>

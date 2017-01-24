@@ -21,7 +21,7 @@ namespace GuiLayer
     {
         public AddCustomer()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
     }
 }

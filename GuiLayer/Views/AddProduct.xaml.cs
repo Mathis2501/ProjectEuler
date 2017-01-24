@@ -21,7 +21,7 @@ namespace GuiLayer
     {
         public AddProduct()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
     }
 }
