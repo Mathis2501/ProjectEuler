@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using PrettyHair.Business;
 
 namespace GuiLayer
 {
@@ -7,8 +8,10 @@ namespace GuiLayer
     /// </summary>
     public partial class MainWindow : Window
     {
+        BusinessFacade Controler;
         public MainWindow()
         {
+            Controler = BusinessFacade.GetInstance;
             InitializeComponent();
         }
     }

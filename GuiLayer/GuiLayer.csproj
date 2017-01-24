@@ -125,6 +125,16 @@
   <ItemGroup>
     <Folder Include="Model\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DomainLayer\DomainLayer.csproj">
+      <Project>{b1cbbb0a-c0a7-4b94-b0e9-b399c616dd25}</Project>
+      <Name>DomainLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PrettyHair\PrettyHair.csproj">
+      <Project>{af5eb97d-720e-4c66-9a5a-296e33d66765}</Project>
+      <Name>PrettyHair</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

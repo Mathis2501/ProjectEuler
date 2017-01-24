@@ -11,31 +11,34 @@ namespace PrettyHair.Business
 
         private static object synchronizationRoot = new Object();
 
-        public static BusinessFacade Instance
+        public static BusinessFacade GetInstance
         {
             get
             {
-                lock (synchronizationRoot)
+                if (instance == null)
                 {
-                    if (instance == null)
+                    lock (synchronizationRoot)
                     {
-                        instance = new BusinessFacade();
+                        if (instance == null)
+                        {
+                            instance = new BusinessFacade();
+                        }
                     }
                 }
-                
+                              
                 return instance;
             }
         }
 
         private BusinessFacade()
         {
-            DatabaseFacade dbf = DatabaseFacade.Instance;
+            DatabaseFacade dbf = DatabaseFacade.GetInstance;
         }
 
         public void SaveCustomer(string lastName, string firstName, string address, string phoneNumber)
         {
             DomainLayer.Customer newCust = new DomainLayer.Customer(lastName, firstName, address, phoneNumber);
-            DatabaseFacade.Instance.NewCustomer(newCust);
+            DatabaseFacade.GetInstance.NewCustomer(newCust);
         }
         public List<DomainLayer.Customer> ShowCustomer()
         {
@@ -45,7 +48,7 @@ namespace PrettyHair.Business
             string address;
             string phoneNumber;
 
-            foreach (var item in DatabaseFacade.Instance.ShowCustomer())
+            foreach (var item in DatabaseFacade.GetInstance.ShowCustomer())
             {
                 lastName = item.LastName;
                 firstName = item.FirstName;

@@ -14,7 +14,7 @@ namespace DatabaseLayer
         Database db;
         private static volatile DatabaseFacade instance;
         private static object synchronizationRoot = new Object();
-        public static DatabaseFacade Instance
+        public static DatabaseFacade GetInstance
         {
             get
             {
