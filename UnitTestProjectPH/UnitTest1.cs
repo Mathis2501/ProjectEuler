@@ -1,11 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PrettyHair;
 using System.Collections.Generic;
 using DomainLayer;
-using PrettyHair.Customer;
-using PrettyHair.Order;
-using PrettyHair.Product;
+using PrettyHair.Repositories;
 
 namespace UnitTestProjectPH
 {

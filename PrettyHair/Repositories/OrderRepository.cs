@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using PrettyHair.Product;
+using PrettyHair.Repositories;
 
-namespace PrettyHair.Order
+namespace PrettyHair.Repositories
 {
     public class OrderRepository
     {

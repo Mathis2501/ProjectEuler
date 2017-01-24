@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace PrettyHair.Customer
+namespace PrettyHair.Repositories
 {
     public class CustomerRepository
     {

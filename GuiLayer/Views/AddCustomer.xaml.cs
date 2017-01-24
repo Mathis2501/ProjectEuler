@@ -11,8 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DomainLayer;
 
-namespace GuiLayer
+namespace GuiLayer.Views
 {
     /// <summary>
     /// Interaction logic for AddCustomer.xaml
@@ -22,6 +23,18 @@ namespace GuiLayer
         public AddCustomer()
         {
             InitializeComponent();
+        }
+
+        private void btn_Add_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox.Text) && string.IsNullOrEmpty(textBox1.Text) && string.IsNullOrEmpty(textBox2.Text) && string.IsNullOrEmpty(textBox3.Text))
+            {
+                Customer cust = new Customer(textBox.Text, textBox1.Text, textBox2.Text, textBox3.Text);
+
+            }
+            
+
+            
         }
     }
 }

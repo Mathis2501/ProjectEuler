@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using DatabaseLayer;
+using DomainLayer;
 
 namespace PrettyHair.Business
 {
@@ -32,12 +33,11 @@ namespace PrettyHair.Business
             DatabaseFacade dbf = DatabaseFacade.Instance;
         }
 
-        public void SaveCustomer(string lastName, string firstName, string address, string phoneNumber)
+        public void SaveCustomer(DomainLayer.Customer cust)
         {
-            DomainLayer.Customer newCust = new DomainLayer.Customer(lastName, firstName, address, phoneNumber);
-            DatabaseFacade.Instance.NewCustomer(newCust);
+            DatabaseFacade.Instance.NewCustomer(cust);
         }
-        public List<DomainLayer.Customer> ShowCustomer()
+        public List<Customer> ShowCustomer()
         {
             List<DomainLayer.Customer> custList = new List<DomainLayer.Customer>();
             string lastName;
@@ -51,7 +51,7 @@ namespace PrettyHair.Business
                 firstName = item.FirstName;
                 address = item.Address;
                 phoneNumber = item.PhoneNumber;
-                DomainLayer.Customer newCust = new DomainLayer.Customer(lastName, firstName, address, phoneNumber);
+                Customer newCust = new Customer(lastName, firstName, address, phoneNumber);
                 custList.Add(newCust);
             }
 
