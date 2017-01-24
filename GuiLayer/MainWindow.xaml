@@ -10,17 +10,21 @@
         MinWidth="300"
         MinHeight="300">
 
+    <Window.DataContext>
+        <ViewModel:MainWindowViewModel />
+    </Window.DataContext>
+    
     <Window.Resources>
         <DataTemplate DataType="{x:Type ViewModel:CustomerViewModel}">
-            <views:CustomerView/>
+            <views:CustomerView />
         </DataTemplate>
 
         <DataTemplate DataType="{x:Type ViewModel:OrderViewModel}">
-            <views:OrderView/>
+            <views:OrderView />
         </DataTemplate>
 
         <DataTemplate DataType="{x:Type ViewModel:ProductsViewModel}">
-            <views:ProductsView/>
+            <views:ProductsView />
         </DataTemplate>
     </Window.Resources>
 
