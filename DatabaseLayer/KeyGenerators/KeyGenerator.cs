@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using PrettyHair.Interfaces;
 using System.Management;
+using DatabaseLayer.Interfaces;
 
-namespace DatabaseLayer
+namespace DatabaseLayer.KeyGenerators
 {
     class GuidKeyGenerator : IKeyGenerator
     {

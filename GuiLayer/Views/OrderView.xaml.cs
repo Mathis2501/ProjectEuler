@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApplication1
+namespace GuiLayer.Views
 {
     /// <summary>
-    /// Interaction logic for ProductNew.xaml
+    /// Interaction logic for OrderView.xaml
     /// </summary>
-    public partial class ProductNew : Window
+    public partial class OrderView : UserControl
     {
-        public ProductNew()
+        public OrderView()
         {
             InitializeComponent();
         }

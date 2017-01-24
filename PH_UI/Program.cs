@@ -47,10 +47,9 @@ namespace PH_UI
                    //case "n": NewProductType(); break;
                    //case "d": ChangeDescription(); break;
                    //case "a": AdjustPrice(); break;
-                   //case "o": ShowOrderList(); break;
+                    case "o": ShowOrderList(); break;
                     case "addorder": AddTestOrders(); break;
                     case "addprod": AddTestProducts(); break;
-                    case "test": TestEvent();   break;
                     case "exit": run = false; break;
                     default: ShowMenuSelectionError(); break;
                 }
@@ -156,27 +155,12 @@ namespace PH_UI
         }*/
         public void ShowCustomerList()
         {
-            
             List<Customer> finalCustList = BusinessFacade.Instance.ShowCustomer();
 
             foreach (Customer cust in finalCustList)
             {
                 Console.WriteLine(cust.ToString());
-
             }
-            
-
-            //DatabaseFacade dbf = new DatabaseFacade();
-            //dbf.GetCustomer();
-            //List<Customer> customerList = custRepo.GetCustomerList();
-            //foreach (Customer customer in customerList)
-            //{
-            //    Console.WriteLine(customer.ToString());
-            //}
-            //Console.ReadKey();
-            //customerList.Clear();
-            //custRepo.ClearRepository();
-            
         }
         
         public void AddTestProducts()
@@ -190,9 +174,9 @@ namespace PH_UI
         }
         public void AddTestOrders()
         {
-            Order newOrder1 = new Order(Convert.ToDateTime("28-10-2016"), Convert.ToDateTime("30-10-2016"), 18, 1);
-            Order newOrder2 = new Order(Convert.ToDateTime("20-10-2016"), Convert.ToDateTime("23-10-2016"), 7, 2);
-            Order newOrder3 = new Order(Convert.ToDateTime("18-10-2016"), Convert.ToDateTime("22-10-2016"), 5, 3);
+            Order newOrder1 = new Order(Convert.ToDateTime("28-10-2016"), Convert.ToDateTime("30-10-2016"));
+            Order newOrder2 = new Order(Convert.ToDateTime("20-10-2016"), Convert.ToDateTime("23-10-2016"));
+            Order newOrder3 = new Order(Convert.ToDateTime("18-10-2016"), Convert.ToDateTime("22-10-2016"));
             orderRepo.AddOrderToList(newOrder1);
             orderRepo.AddOrderToList(newOrder2);
             orderRepo.AddOrderToList(newOrder3);
@@ -216,17 +200,6 @@ namespace PH_UI
             }
             Console.ReadKey();
             productList.Clear();
-        }
-        public void TestEvent()
-        {
-
-            OrderRepository m = new OrderRepository();
-            Email l = new Email();
-            l.Subscribe(m);
-            m.CheckQuantityAgainstAmount();
-            
-            Console.ReadKey();
-            
         }
     }
 }

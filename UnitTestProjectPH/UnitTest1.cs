@@ -3,6 +3,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PrettyHair;
 using System.Collections.Generic;
 using DomainLayer;
+using PrettyHair.Customer;
+using PrettyHair.Order;
+using PrettyHair.Product;
 
 namespace UnitTestProjectPH
 {
@@ -36,7 +39,7 @@ namespace UnitTestProjectPH
         public void CanAddOrderToList()
         {
             OrderRepository invRepo = new OrderRepository();
-            Order newOrder = new Order(DateTime.Parse("15-11-2016"), DateTime.Parse("01-12-2016"), 20, 2);
+            Order newOrder = new Order(DateTime.Parse("15-11-2016"), DateTime.Parse("01-12-2016"));
 
             invRepo.AddOrderToList(newOrder);
             List<Order> orderList = invRepo.GetList();

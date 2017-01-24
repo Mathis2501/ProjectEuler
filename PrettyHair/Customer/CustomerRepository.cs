@@ -1,20 +1,16 @@
-﻿using DomainLayer;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
-namespace PrettyHair
+namespace PrettyHair.Customer
 {
     public class CustomerRepository
     {
-        List<Customer> customerList = new List<Customer>();
+        List<DomainLayer.Customer> customerList = new List<DomainLayer.Customer>();
 
-        public void AddAllCustomersToList(List<Customer> custList)
+        public void AddAllCustomersToList(List<DomainLayer.Customer> custList)
         {
             customerList.AddRange(custList);
         }
-        public void AddCustomerToList(Customer newCustomer)
+        public void AddCustomerToList(DomainLayer.Customer newCustomer)
         {
             customerList.Add(newCustomer);
         }
@@ -22,18 +18,18 @@ namespace PrettyHair
         {
             customerList.Clear();
         }
-        public List<Customer> GetCustomerList()
+        public List<DomainLayer.Customer> GetCustomerList()
         {
             return customerList;
         }
         
         public void CreateCustomer(string lastName, string firstName, string address, string phoneNumber)
         {
-            Customer newCust = new Customer(lastName, firstName, address, phoneNumber);
+            DomainLayer.Customer newCust = new DomainLayer.Customer(lastName, firstName, address, phoneNumber);
             SaveToDB(newCust);
 
         }
-        public void SaveToDB(Customer newCust)
+        public void SaveToDB(DomainLayer.Customer newCust)
         {
             DatabaseLayer.DatabaseFacade.Instance.NewCustomer(newCust);
         }

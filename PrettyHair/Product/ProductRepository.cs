@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
-namespace PrettyHair
+namespace PrettyHair.Product
 {
     public class ProductRepository
     {
-        Product product = new Product();
-        List<Product> productList = new List<Product>();
+        DomainLayer.Product product = new DomainLayer.Product();
+        List<DomainLayer.Product> productList = new List<DomainLayer.Product>();
         List<string> stringList = new List<string>();
 
         public void AddIgnoredAsFirstToList()
@@ -20,19 +17,19 @@ namespace PrettyHair
             productList[index].Description = newDescription;
         }
 
-        public void AddProductToList(Product newProduct)
+        public void AddProductToList(DomainLayer.Product newProduct)
         {
             productList.Add(newProduct);
         }
 
-        public List<Product> GetList()
+        public List<DomainLayer.Product> GetList()
         {
             return productList;
         }
 
         public List<string> GetListAsStringList()
         {
-            foreach (Product product in productList)
+            foreach (DomainLayer.Product product in productList)
             {
                 stringList.Add(product.ToString());
             }
@@ -47,7 +44,7 @@ namespace PrettyHair
 
         public void DeleteProduct(int productId)
         {
-            foreach (Product product in productList)
+            foreach (DomainLayer.Product product in productList)
             {
                 if (product.GetId() == productId)
                 {
