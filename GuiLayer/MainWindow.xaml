@@ -6,7 +6,7 @@
         xmlns:views = "clr-namespace:GuiLayer.Views"
         xmlns:ViewModel = "clr-namespace:GuiLayer.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="300" Width="300"
+        Title="MainWindow" Height="485" Width="320"
         MinWidth="300"
         MinHeight="300">
 
