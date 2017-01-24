@@ -1,6 +1,6 @@
 ﻿namespace GuiLayer.ViewModel
 {
-    public class OrderViewModel
+    class OrderViewModel : BindableBase
     {
         
     }
