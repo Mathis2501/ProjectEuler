@@ -5,11 +5,11 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:GuiLayer.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="430" d:DesignWidth="300">
     <Canvas>
         <Button Canvas.Left="20" x:Name="btnBack" Content="Back" Width="50" Height="30" Canvas.Bottom="10"/>
         <Button Canvas.Right="20" x:Name="BtnAdd" Content="Add Product" Width="200" Height="30" Canvas.Bottom="10"/>
-        <ListBox x:Name="listBox" Height="200" Canvas.Left="20" Canvas.Right="20" Canvas.Top="50" Width="260"/>
+        <ListBox x:Name="listBox" Height="330" Canvas.Left="20" Canvas.Right="20" Canvas.Top="50" Width="260"/>
         <TextBox x:Name="txtSearch" Height="30" Canvas.Left="20" TextWrapping="Wrap" Text="Search" Canvas.Top="10" Width="260" VerticalContentAlignment="Center" FontSize="18"/>
     </Canvas>
 </UserControl>
