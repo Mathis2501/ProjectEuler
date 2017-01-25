@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using DatabaseLayer;
+using DomainLayer;
 
 namespace PrettyHair.Business
 {
@@ -11,36 +12,32 @@ namespace PrettyHair.Business
 
         private static object synchronizationRoot = new Object();
 
-        public static BusinessFacade GetInstance
+        public static BusinessFacade Instance
         {
             get
             {
-                if (instance == null)
+                lock (synchronizationRoot)
                 {
-                    lock (synchronizationRoot)
+                    if (instance == null)
                     {
-                        if (instance == null)
-                        {
-                            instance = new BusinessFacade();
-                        }
+                        instance = new BusinessFacade();
                     }
                 }
-                              
+                
                 return instance;
             }
         }
 
         private BusinessFacade()
         {
-            DatabaseFacade dbf = DatabaseFacade.GetInstance;
+            DatabaseFacade dbf = DatabaseFacade.Instance;
         }
 
-        public void SaveCustomer(string lastName, string firstName, string address, string phoneNumber)
+        public void SaveCustomer(DomainLayer.Customer cust)
         {
-            DomainLayer.Customer newCust = new DomainLayer.Customer(lastName, firstName, address, phoneNumber);
-            DatabaseFacade.GetInstance.NewCustomer(newCust);
+            DatabaseFacade.Instance.NewCustomer(cust);
         }
-        public List<DomainLayer.Customer> ShowCustomer()
+        public List<Customer> ShowCustomer()
         {
             List<DomainLayer.Customer> custList = new List<DomainLayer.Customer>();
             string lastName;
@@ -48,13 +45,13 @@ namespace PrettyHair.Business
             string address;
             string phoneNumber;
 
-            foreach (var item in DatabaseFacade.GetInstance.ShowCustomer())
+            foreach (var item in DatabaseFacade.Instance.ShowCustomer())
             {
                 lastName = item.LastName;
                 firstName = item.FirstName;
                 address = item.Address;
                 phoneNumber = item.PhoneNumber;
-                DomainLayer.Customer newCust = new DomainLayer.Customer(lastName, firstName, address, phoneNumber);
+                Customer newCust = new Customer(lastName, firstName, address, phoneNumber);
                 custList.Add(newCust);
             }
 

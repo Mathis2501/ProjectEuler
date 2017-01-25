@@ -15,7 +15,7 @@
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="26" Margin="70,46,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="26" Margin="70,82,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="26" Margin="70,118,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Center" Margin="55,0,0,10" VerticalAlignment="Bottom" Width="120"/>
-        <Button x:Name="btnBack" Content="back" HorizontalAlignment="Center" Margin="0,0,140,10" VerticalAlignment="Bottom" Width="50"/>
+        <Button x:Name="btnBack" Content="back" HorizontalAlignment="Center" Margin="7,0,150.2,10" VerticalAlignment="Bottom" Width="46" Click="btnBack_Click"/>
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="70,151,0,0" VerticalAlignment="Top" Width="120" Click="btn_Add_Click"/>
     </Grid>
 </Window>

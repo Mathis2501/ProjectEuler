@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using PrettyHair.Order;
+using PrettyHair.Repositories;
 
 namespace PrettyHair
 {
