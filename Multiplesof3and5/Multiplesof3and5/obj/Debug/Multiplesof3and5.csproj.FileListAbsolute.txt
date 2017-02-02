@@ -1,0 +1,6 @@
+C:\Users\MathiasBellerbySylve\Source\Repos\PH-Gruppe_7\Multiplesof3and5\Multiplesof3and5\bin\Debug\Multiplesof3and5.exe.config
+C:\Users\MathiasBellerbySylve\Source\Repos\PH-Gruppe_7\Multiplesof3and5\Multiplesof3and5\bin\Debug\Multiplesof3and5.exe
+C:\Users\MathiasBellerbySylve\Source\Repos\PH-Gruppe_7\Multiplesof3and5\Multiplesof3and5\bin\Debug\Multiplesof3and5.pdb
+C:\Users\MathiasBellerbySylve\Source\Repos\PH-Gruppe_7\Multiplesof3and5\Multiplesof3and5\obj\Debug\Multiplesof3and5.csprojResolveAssemblyReference.cache
+C:\Users\MathiasBellerbySylve\Source\Repos\PH-Gruppe_7\Multiplesof3and5\Multiplesof3and5\obj\Debug\Multiplesof3and5.exe
+C:\Users\MathiasBellerbySylve\Source\Repos\PH-Gruppe_7\Multiplesof3and5\Multiplesof3and5\obj\Debug\Multiplesof3and5.pdb
